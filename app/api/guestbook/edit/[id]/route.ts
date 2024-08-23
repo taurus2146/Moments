@@ -14,7 +14,7 @@ function getKey(id?: string) {
   return `guestbook${id ? `:${id}` : ""}`;
 }
 const EditGuestbookSchema = z.object({
-  message: z.string().min(1).max(600),
+  message: z.string().min(1).max(50000),
   tags: z.array(z.string()).nullable().optional(),
   isUseMarkdown: z.boolean().optional(),
 });

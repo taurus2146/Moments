@@ -3,7 +3,7 @@ import { z } from "zod";
 
 export const GuestbookDtoSchema = z.object({
   id: z.string(),
-  message: z.string().min(1).max(600),
+  message: z.string().min(1).max(50000),
   tags: z.array(z.string()).nullable().optional(),
   userId: z.string(),
   userInfo: z.object({

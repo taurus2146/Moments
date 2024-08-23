@@ -14,7 +14,7 @@ function getKeyInPostNoteByAPIKey(id?: string) {
   return `post-note-by-apikey${id ? `:${id}` : ""}`;
 }
 const SignGuestbookSchema = z.object({
-  content: z.string().min(1).max(600),
+  content: z.string().min(1).max(50000),
   tags: z.array(z.string()).nullable().optional(),
   isUseMarkdown: z.boolean().optional(),
 });
