@@ -46,7 +46,7 @@ export function GuestbookFeeds() {
   if (!feedListDataLength && !isLoading) {
     return (
       <div className="flex w-full flex-col items-center justify-center gap-3">
-        <div className="text-label-muted text-center">加载失败</div>
+        <div className="text-label-muted text-center"></div>
       </div>
     );
   }
