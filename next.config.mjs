@@ -12,13 +12,17 @@ const nextConfig = {
       {
         source: "/",
         destination: "/notes",
-        permanent: true,
+        permanent: false,
       },
     ];
     try {
       return [...redirects, ...(await get("redirects"))];
     } catch {
-      return [];
+      return [{
+        source: "/",
+        destination: "/notes",
+        permanent: true,
+      }];
     }
   },
   webpack(config) {
