@@ -1,4 +1,4 @@
-export const MAX_MESSAGE_LENGTH = 600;
+export const MAX_MESSAGE_LENGTH = 50000;
 export const FEED_PAGE_SIZE = 15;
 
 export const GITHUB_MILESTONES_API_PREFIX = "https://api.github.com/repos/TobeBetterV/Moments/milestones/";
